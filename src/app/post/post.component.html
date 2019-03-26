@@ -1,0 +1,21 @@
+<div [ngStyle]="{'background-color': getColor()}">
+  <div class="row">
+    <div style="font-weight:bold;font-size: 400%" class="col-xs-6">
+      {{postTitle}}
+    </div>
+    <div style="font-weight:bold;font-size: 200%" class="col-xs-6">
+      {{postDate | date:'dd/MM/yyyy, HH:mm'}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {{postContent}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button style="margin-right: 0.5%" class="btn btn-success" (click)="incrementLikes()">Love it</button>
+      <button class="btn btn-danger" (click)="decrementLikes()">Don't love it</button>
+    </div>
+  </div>
+</div>
